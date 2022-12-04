@@ -6,3 +6,5 @@ def islower(c):
                 return False
             elif (i >= 97 and i <= 122):
                 return True
+            else:
+                return False
