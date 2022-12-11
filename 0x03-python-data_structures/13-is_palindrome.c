@@ -2,7 +2,7 @@
 
 /**
   * is_palindrome - To check if a linked list is palindrome.
-  * @head - the head to the linked list.
+  * @head: the head to the linked list.
   * Return: Bool
   */
 
@@ -44,10 +44,12 @@ int list_len(const listint_t *head)
 
 int ple_check(listint_t *head, int list_len)
 {
-    int array_a[list_len];
-    int array_b[list_len];
-    int i;
-    int x;
+    int *array_a, *array_b, i, x;
+
+    array_a = malloc(sizeof(int) * (list_len + 1));
+    array_b = malloc(sizeof(int) * (list_len + 1));
+    if (array_a == NULL || array_b == NULL)
+        return (0);
 
     i = 0;
     while (head != NULL)
@@ -62,8 +64,14 @@ int ple_check(listint_t *head, int list_len)
     while (i <= list_len)
     {
         if (array_a[i] != array_b[i])
+        {
+            free(array_a);
+            free(array_b);
             return (0);
+        }
         i++;
     }
+    free(array_a);
+    free(array_b);
     return (1);
 }
