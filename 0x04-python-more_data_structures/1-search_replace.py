@@ -11,7 +11,7 @@ def search_replace(my_list, search, replace):
     newlist = []
     for i in my_list:
         if (check(search, i)):
-            newlist.append(89)
+            newlist.append(replace)
         else:
             newlist.append(i)
     return (newlist)
