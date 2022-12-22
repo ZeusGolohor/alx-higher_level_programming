@@ -5,7 +5,8 @@ def list_division(my_list_1, my_list_2, list_length):
     i = 0
     try:
         for l1, l2 in zip(my_list_1, my_list_2):
-            if (isinstance(l1, str) is False and isinstance(l2, str) is False and i < list_length):
+            if (isinstance(l1, str) is False and isinstance(l2, str)
+                    is False and i < list_length):
                 if (l2 == 0):
                     print('{}'.format('division by 0'))
                     new_list.append(0)
