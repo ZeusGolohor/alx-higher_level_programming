@@ -11,14 +11,14 @@ class Square:
     to demonstrate how classes works
     """
     def __init__(self, size=0):
-        self.__size_att = size
+        self.size = size
 
     @property
-    def __size_att(self):
+    def size(self):
         return (self.__size)
 
-    @__size_att.setter
-    def __size_att(self, x):
+    @size.setter
+    def size(self, x):
         if isinstance(x, int) is False:
             raise TypeError("size must be an integer")
         else:
@@ -28,4 +28,4 @@ class Square:
                 self.__size = x
 
     def area(self):
-        return (self.__size_att ** 2)
+        return (self.size ** 2)
