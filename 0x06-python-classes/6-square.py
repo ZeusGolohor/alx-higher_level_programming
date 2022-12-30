@@ -14,7 +14,6 @@ class Square:
         self.size = size
         self.position = position
         self.__count_lim = 0
-        self.__count = 1
 
     @property
     def size(self):
@@ -38,12 +37,11 @@ class Square:
         if num1 == 0:
             print()
         else:
-            for i in range(num1):
-                if (self.__position[1] > self.__count_lim):
-                    if (self.__count == 1):
-                        print('')
-                        self.__count += 1
+            if (self.__position[1] > self.__count_lim):
+                for i in range(self.__position[1]):
+                    print('')
 
+            for i in range(num1):
                 for x in range(self.__position[0]):
                     print(' ', end='')
 
