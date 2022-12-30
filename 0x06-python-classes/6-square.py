@@ -41,7 +41,7 @@ class Square:
             for i in range(num1):
                 if (self.__position[1] > self.__count_lim):
                     if (self.__count == 1):
-                        print()
+                        print('')
                         self.__count += 1
 
                 for x in range(self.__position[0]):
