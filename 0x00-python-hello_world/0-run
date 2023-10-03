@@ -1,4 +1,2 @@
 #!/bin/bash
-if [ -v PYFILE ]; then
-	python3 "$PYFILE"
-fi
+python3 "$PYFILE"
