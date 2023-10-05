@@ -11,4 +11,3 @@ def pow(a, b):
             i *= a
 
         return (1/i)
-
