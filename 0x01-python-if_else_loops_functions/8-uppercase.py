@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def prt(prt):
     print('{}'.format(prt), end='')
 
