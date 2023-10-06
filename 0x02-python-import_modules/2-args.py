@@ -5,7 +5,7 @@ import sys
 def args():
     i = len(sys.argv)
     x = 1
-    print("{:d} argument".format((i - 1)))
+    print("{:d} arguments".format((i - 1)))
     while (x < i):
         print("{:d} {}".format(x, sys.argv[x]))
         x = x + 1
