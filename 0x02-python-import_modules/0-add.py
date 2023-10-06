@@ -7,7 +7,7 @@ def res():
     a = 1
     b = 2
     c = add(a, b)
-    print(f"{a:d} + {b:d} = {c:d}")
+    print('{} + {} = {}'.format(a, b, add(a, b)))
 
 
 if __name__ == "__main__":
