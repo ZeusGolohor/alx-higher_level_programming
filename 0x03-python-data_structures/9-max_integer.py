@@ -13,4 +13,3 @@ def max_integer(my_list=[]):
 
 if __name__ == '__main__':
     max_integer(my_list=[])
-
