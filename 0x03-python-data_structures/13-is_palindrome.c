@@ -45,10 +45,12 @@ int list_len(const listint_t *head)
 int ple_check(listint_t *head, int list_len)
 {
     int *array_b, i, x;
+    listint_t *temp;
 
     array_b = malloc(sizeof(int) * (list_len + 1));
-    if (array_b == NULL)
+    if (array_b == NULL || head == NULL)
 	return (0);
+    temp = head;
     i = 0;
     while (head != NULL)
     {
@@ -57,8 +59,9 @@ int ple_check(listint_t *head, int list_len)
 	i++;
 	head = head->next;
     }
+    head = temp;
     i = 0;
-    while (head != NULL)
+    while (i <= list_len)
     {
     	if (head->n != array_b[i])
 	{
