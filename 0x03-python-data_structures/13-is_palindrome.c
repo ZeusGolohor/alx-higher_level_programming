@@ -44,34 +44,30 @@ int list_len(const listint_t *head)
 
 int ple_check(listint_t *head, int list_len)
 {
-    int *array_a, *array_b, i, x;
+    int *array_b, i, x;
 
-    array_a = malloc(sizeof(int) * (list_len + 1));
     array_b = malloc(sizeof(int) * (list_len + 1));
-    if (array_a == NULL || array_b == NULL)
-        return (0);
-
+    if (array_b == NULL)
+	return (0);
     i = 0;
     while (head != NULL)
     {
-        x = head->n;
-        array_a[i] = x;
-        array_b[(list_len - i)] = x;
-        i++;
-        head = head->next;
+    	x = head->n;
+	array_b[(list_len - i)] = x;
+	i++;
+	head = head->next;
     }
     i = 0;
-    while (i <= list_len)
+    while (head != NULL)
     {
-        if (array_a[i] != array_b[i])
-        {
-            free(array_a);
-            free(array_b);
-            return (0);
-        }
-        i++;
+    	if (head->n != array_b[i])
+	{
+		free(array_b);
+		return (0);
+	}
+	i++;
+	head = head->next;
     }
-    free(array_a);
     free(array_b);
     return (1);
 }
