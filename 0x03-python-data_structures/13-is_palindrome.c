@@ -47,8 +47,10 @@ int ple_check(listint_t *head, int list_len)
     int *array_b, i, x;
     listint_t *temp;
 
+    if (head == NULL)
+	return (1);
     array_b = malloc(sizeof(int) * (list_len + 1));
-    if (array_b == NULL || head == NULL)
+    if (array_b == NULL)
 	return (0);
     temp = head;
     i = 0;
