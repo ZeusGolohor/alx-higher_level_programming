@@ -8,11 +8,16 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *temp, *newnode;
+	listint_t *temp = *head, *newnode;
 
 	if (*head == NULL)
-		return (NULL);
-	temp = *head;
+	{
+		newnode = create_newnode(number, NULL);
+		if (newnode == NULL)
+			return (NULL);
+		*head = newnode;
+		return (*head);
+	}
 	if (number <= temp->n)
 	{
 		newnode = create_newnode(number, temp);
