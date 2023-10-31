@@ -1,0 +1,25 @@
+===============================
+ How to Use 0-add_integer.py
+===============================
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+>>> add_integer(3, -2)
+1
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(333, "string")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer("string", 333)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(1.0, 1.0)
+2
+>>> add_integer(float('nan'), 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(3, float('nan'))
+Traceback (most recent call last):
+TypeError: b must be an integer
