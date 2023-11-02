@@ -47,8 +47,18 @@ class Rectangle:
         return (2 * (self.width + self.height))
 
     def __str__(self):
-        for i in range(self.height):
-            for x in range(self.width):
-                print('#', end="")
-            print()
-        return ""
+        """
+        Used to return a nicely printed user friendly
+        string.
+        """
+        string = ''
+        if (self.__height == 0):
+            return (string)
+        if (self.__width == 0):
+            return (string)
+
+        for i in range(self.__height):
+            for x in range(self.__width):
+                string = string + '#'
+            string = string + '\n'
+        return (string)
