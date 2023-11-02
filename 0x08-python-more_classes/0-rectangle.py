@@ -4,7 +4,7 @@ This module is a simple Rectangle module.
 """
 
 
-Class Rectangle:
+class Rectangle:
     """
     This is a simple rectangle class
     """
