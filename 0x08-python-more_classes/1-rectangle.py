@@ -29,7 +29,7 @@ class Rectangle:
     def height(self):
         return (self.__height)
 
-    @width.setter
+    @height.setter
     def height(self, value):
         if (isinstance(value, int) is False):
             raise TypeError("height must be an integer")
