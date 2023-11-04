@@ -18,14 +18,14 @@ def matrix_divided(matrix, div):
     perm = []
     for i in matrix:
         if (len(i) is not max_len):
-            raise TypeError('Each row of the matrix' +
+            raise TypeError('Each row of the matrix ' +
                             'must have the same size')
         else:
             temp = []
             for x in i:
                 if ((isinstance(x, int) is False) and
                         (isinstance(x, float) is False)):
-                    raise TypeError('matrix must be a matrix' +
+                    raise TypeError('matrix must be a matrix ' +
                                     '(list of lists) of integers/floats')
                 if ((isinstance(div, int) is False) and
                         (isinstance(div, float) is False)):
