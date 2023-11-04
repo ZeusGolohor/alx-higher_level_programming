@@ -11,7 +11,8 @@ def add_integer(a, b=98):
     """
     if ((isinstance(a, int) is True or isinstance(a, float) is True)
             and (isinstance(b, int) is True or isinstance(b, float) is True)):
-        if (a is NaN):
+        # if (a is NaN):
+        if (math.isnan(a)):
             raise TypeError('a must be an integer')
         elif (math.isnan(b) is True):
             raise TypeError('b must be an integer')
