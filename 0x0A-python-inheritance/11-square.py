@@ -74,4 +74,3 @@ class Square(Rectangle):
         The string to be returned by the print function.
         """
         return ("[Square] {}/{}".format(self.__size, self.__size))
-
