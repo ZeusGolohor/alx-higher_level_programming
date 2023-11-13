@@ -164,4 +164,3 @@ class Base:
             cls_dict["y"] = int(inst[4])
             cls_inst.append(dummy_class.create(**cls_dict))
         return (cls_inst)
-
