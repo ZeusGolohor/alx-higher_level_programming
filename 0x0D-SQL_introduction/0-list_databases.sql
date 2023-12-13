@@ -1,2 +1,2 @@
--- Script to show all databases
-show DATABASES;
+-- Script to show all databases inbtge mySQL Sever.
+SHOW DATABASES;
