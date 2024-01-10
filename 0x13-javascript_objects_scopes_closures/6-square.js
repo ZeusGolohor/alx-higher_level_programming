@@ -10,7 +10,7 @@ class Square extends Square2 {
     if (!c) {
       super.print();
     } else {
-      let str = 'C';
+      let str = c;
       str = str.repeat(this.width);
       let i = 0;
       while (i < this.height) {
