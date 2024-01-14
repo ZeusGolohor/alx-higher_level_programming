@@ -20,7 +20,7 @@ def run():
                             charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE name\
-        LIKE '{}' ORDER BY states.id ASC".format(name))
+        LIKE BINARY '{}' ORDER BY states.id ASC".format(name))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
