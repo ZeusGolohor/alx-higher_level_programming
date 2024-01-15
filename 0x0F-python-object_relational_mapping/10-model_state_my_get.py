@@ -23,7 +23,7 @@ if __name__ == '__main__':
     state = session.query(State).filter(
         State.name == name
     ).order_by(State.id).first()
-    if state != None:
+    if state is None:
         print("{}".format(state.id))
     else:
         print("Not found")
