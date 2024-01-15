@@ -19,7 +19,7 @@ def run():
         pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(asc(State.id)).all()
+    for state in session.query(State).order_by(asc(State.id)):
         print('{}: {}'.format(state.id, state.name))
 
 
