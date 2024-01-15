@@ -17,6 +17,9 @@ Base = declarative_base(metadata=mtd)
 
 
 class State(Base):
+    """
+    This is a state class also used to manage state db.
+    """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
