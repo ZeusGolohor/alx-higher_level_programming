@@ -12,7 +12,7 @@ def run():
     """
     This is a method to make sure code dont run unless its needed
     """
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1],
         sys.argv[2],
         sys.argv[3]),
