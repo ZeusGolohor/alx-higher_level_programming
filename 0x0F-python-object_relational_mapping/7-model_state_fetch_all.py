@@ -18,4 +18,4 @@ if __name__ == '__main__':
     sss = sessionmaker(bind=engine)
     session = sss()
     for state in session.query(State).order_by(asc(State.id)):
-        print('{}: {}'.format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
