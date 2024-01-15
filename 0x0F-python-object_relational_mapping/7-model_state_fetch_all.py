@@ -8,10 +8,7 @@ from sqlalchemy.orm import sessionmaker
 import sys
 
 
-def run():
-    """
-    This is a method to make sure code dont run unless its needed
-    """
+if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1],
         sys.argv[2],
@@ -23,7 +20,3 @@ def run():
     states = session.query(State).order_by(State.id)
     for state in states:
         print('{}: {}'.format(state.id, state.name))
-
-
-if __name__ == '__main__':
-    run()
