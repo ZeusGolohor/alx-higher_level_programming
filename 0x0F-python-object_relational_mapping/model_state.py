@@ -8,10 +8,12 @@ from sqlalchemy import (
     Column,
     Integer,
     String,
-    create_engine
+    create_engine,
+    MetaData
 )
 
-Base = declarative_base()
+mtd = MataData()
+Base = declarative_base(metadata=mtd)
 
 
 class State(Base):
@@ -27,6 +29,3 @@ engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            'hbtn_0e_6_usa',
                            pool_pre_ping=True)
                        )
-
-
-Base.metadata.create_all(engine)
