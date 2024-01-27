@@ -10,8 +10,6 @@ import urllib.parse
 def run():
     url = sys.argv[1]
     email = sys.argv[2]
-    print(url)
-    print(email)
     values = {'email': email}
     data = urllib.parse.urlencode(values)
     data = data.encode('utf-8')
