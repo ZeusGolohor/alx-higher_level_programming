@@ -13,7 +13,7 @@ def run():
     values = {'email': email}
     data = urllib.parse.urlencode(values)
     data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
+    req = urllib.request.Request(url, data, method="POST")
     with urllib.request.urlopen(url) as response:
         data = response.read()
         data = data.decode('utf-8')
