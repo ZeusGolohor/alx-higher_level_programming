@@ -1,10 +1,10 @@
 #!/usr/bin/node
 const request = require('request');
 
-function stat(url) {
+function stat (url) {
   request(url, (error, response) => {
     if (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
     } else {
       console.log(`code: ${response.statusCode}`);
     }
@@ -12,9 +12,8 @@ function stat(url) {
 }
 
 if (process.argv.length === 3) {
-    const url = process.argv[2];
-    stat(url);
+  const url = process.argv[2];
+  stat(url);
 } else {
-    console.log("Usage: script <URL>");
+  console.log('Usage: script <URL>');
 }
-
