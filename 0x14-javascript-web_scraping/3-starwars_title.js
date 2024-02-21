@@ -11,7 +11,7 @@ function stat (url) {
         return;
       }
       const movie = JSON.parse(body);
-      console.log('Title:', movie.title);
+      console.log(movie.title);
     }
   });
 }
